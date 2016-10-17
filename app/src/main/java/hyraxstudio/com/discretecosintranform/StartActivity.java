@@ -28,7 +28,14 @@ public class StartActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(new Matrix(input.getText().toString()).transformDCT().print());
+                textView.setText("Matrix Image\n");
+                textView.append(new Matrix(input.getText().toString()).print());
+                textView.append("\nMatrix T\n");
+                textView.append(new Matrix(input.getText().toString()).createMatrixT().printStrict());
+                textView.append("\nMatrix T'\n");
+                textView.append(new Matrix(input.getText().toString()).createMatrixT().matrixChangePosition().printStrict());
+                textView.append("\nDCT\n");
+                textView.append(new Matrix(input.getText().toString()).transformDCT().print());
             }
         });
     }
