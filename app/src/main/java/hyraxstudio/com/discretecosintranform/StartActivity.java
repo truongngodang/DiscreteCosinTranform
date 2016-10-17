@@ -28,7 +28,7 @@ public class StartActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(new Matrix(input.getText().toString()).bienDoiDCT().print());
+                textView.setText(new Matrix(input.getText().toString()).transformDCT().print());
             }
         });
     }
